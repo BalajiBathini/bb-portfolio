@@ -10389,7 +10389,8 @@ h3.global-white {
 .w3l-header .navbar-light .navbar-brand {
   color: var(--primary-color);
   font-weight: 600;
-  font-size: 42px; }
+  font-size: 30px; }
+  
 
 .w3l-header li.nav-item {
   margin: 0px 6px; }

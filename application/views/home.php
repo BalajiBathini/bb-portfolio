@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,30 +22,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-  <?php 
-    if($this->session->flashdata('response') == true){ ?>
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Hurray!</strong> Your response has been successfully saved in our database.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-   <?php } ?>
+  <?php
+  if ($this->session->flashdata('response') == true) { ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Hurray!</strong> Your response has been successfully saved in our database.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <?php } ?>
   <!-- header -->
   <header class="w3l-header">
     <div class="hero-header-11">
       <div class="hero-header-11-content">
         <div class="container">
-          <nav class="navbar navbar-expand-xl navbar-light py-sm-2 py-1 px-0">
+          <nav class="navbar navbar-expand-xl navbar-light bg-light fixed-top py-sm- py-1 px-5">
             <a class="navbar-brand editContent" href="<?php echo base_url(); ?>">BB's Portfolio</a>
             <!-- if logo is image enable this   
 				<a class="navbar-brand" href="#index.html">
 						<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-				</a> -->  
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon fa fa-bars"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link " href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#gallery">Certificates</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#"></a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </div>
@@ -53,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </header>
   <!-- //header -->
   <!--  Main banner section -->
-  <section class="w3l-main-banner">
+  <section class="w3l-main-banner" id="home">
     <div class="companies20-content">
       <div class="companies-wrapper">
         <div class="item">
@@ -75,48 +93,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </section>
   <!--  //Main banner section -->
   <!--  About section -->
-  <div class="w3l-about1 pt-5" id="about">
-    <div class="container pt-lg-3 pb-5">
-      <h3 class="global-title">About Me</h3>
-      <div class="aboutgrids row">
-        <div class="col-lg-4 aboutgrid2">
-          <img src="<?php echo base_url(); ?>assets/images/bala2.jpg" style="height: 500px;" alt="about image" class="img-fluid" />
-        </div>
-        <div class="col-lg-8 align-self-center aboutgrid1 my-lg-0 my-5">
-          <h4>Why hire me for your project?</h4>
-          <p>A highly motivated and dedicated full stack developer with a strong foundation in programming languages and 
-            frameworks such as HTML, CSS, JavaScript, Angular, Node.js, Java, and Python. Excited to begin a career 
-            in full stack development and contribute to innovative and dynamic web applications. Possessing excellent 
-            problem-solving skills, the ability to work collaboratively, and a passion for staying up-to-date with the 
-            latest industry trends and technologies.</p>
+  <section>
+    <div class="w3l-about1 pt-5" id="about">
+      <div class="container pt-lg-3 pb-5">
+        <h3 class="global-title">About Me</h3>
+        <div class="aboutgrids row">
+          <div class="col-lg-4 aboutgrid2">
+            <img src="<?php echo base_url(); ?>assets/images/bala2.jpg" style="height: 500px;" alt="about image" class="img-fluid" />
+          </div>
+          <div class="col-lg-8 align-self-center aboutgrid1 my-lg-0 my-5">
+            <h4>Why hire me for your project?</h4>
+            <p>A highly motivated and dedicated full stack developer with a strong foundation in programming languages and
+              frameworks such as HTML, CSS, JavaScript, Angular, Node.js, Java, and Python. Excited to begin a career
+              in full stack development and contribute to innovative and dynamic web applications. Possessing excellent
+              problem-solving skills, the ability to work collaboratively, and a passion for staying up-to-date with the
+              latest industry trends and technologies.</p>
 
-          <a href="<?php echo base_url(); ?>assets/files/Balaji-Bathini-CV.docx" class="btn btn-outline-primary p-3">Download CV</a>
+            <a href="<?php echo base_url(); ?>assets/files/Balaji-Bathini-CV.docx" class="btn btn-outline-primary p-3">Download CV</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aboutbottom py-5">
+        <div class="container py-lg-3">
+          <div class="bottomgrids row">
+
+            <div class="col-md-6 bottomgrid1 mt-md-0 mt-5">
+              <h4>Frontend</h4>
+              <p>As a frontend developer, my primary responsibilities would include designing and
+                implementing the user interface, creating the layout and structure of web pages, and
+                ensuring that the user experience is smooth and intuitive.</p>
+            </div>
+            <div class="col-md-6 bottomgrid1 mt-lg-0 mt-5">
+              <h4>Backend</h4>
+              <p>As a backend developer, my primary responsibilities would include designing and implementing
+                the server-side logic, building the application's API, managing databases, and ensuring that the
+                application is scalable and secure.</p>
+            </div>
+
+            <div class="clearfix"> </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="aboutbottom py-5">
-      <div class="container py-lg-3">
-        <div class="bottomgrids row">
-         
-          <div class="col-md-6 bottomgrid1 mt-md-0 mt-5">
-            <h4>Frontend</h4>
-            <p>As a frontend developer, my primary responsibilities would include designing and 
-              implementing the user interface, creating the layout and structure of web pages, and 
-              ensuring that the user experience is smooth and intuitive.</p>
-          </div>
-          <div class="col-md-6 bottomgrid1 mt-lg-0 mt-5">
-            <h4>Backend</h4>
-            <p>As a backend developer, my primary responsibilities would include designing and implementing 
-              the server-side logic, building the application's API, managing databases, and ensuring that the 
-              application is scalable and secure.</p>
-          </div>
-        
-          <div class="clearfix"> </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
   <!--  //About section -->
 
   <!--  Work gallery section -->
@@ -125,10 +145,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="container py-lg-5">
         <h3 class="global-title">Latest Certifications</h3>
         <div class="row masonry">
+          
           <div class="col-md-4 col-sm-6 brick">
             <a href="<?php echo base_url(); ?>assets/certificates/salesforce.pdf">
               <img src="<?php echo base_url(); ?>assets/certificates/salesforce.png" class="img-fluid insta-pic" alt="insta-pic" />
             </a>
+
           </div>
           <div class="col-md-4 col-sm-6 brick">
             <a href="<?php echo base_url(); ?>assets/certificates/Accenture _developer-virtual-experience-program.pdf">
@@ -160,6 +182,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <img src="<?php echo base_url(); ?>assets/certificates/workshop.jpg" class="img-fluid insta-pic" alt="insta-pic" />
             </a>
           </div>
+          <div class="col-md-4 col-sm-6 brick">
+            <a href="<?php echo base_url(); ?>assets/certificates/CodeClause.pdf">
+              <img src="<?php echo base_url(); ?>assets/certificates/CodeClause.png" class="img-fluid insta-pic" alt="insta-pic" />
+            </a>
+          </div>
         </div>
         <div class="text-center">
           <a href="https://www.instagram.com/balajijr_03" class="follow-insta-button btn btn-secondary p-3 mt-5" target="_blank">
@@ -176,13 +203,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="container">
         <div class="middle-section text-center">
           <div class="section-width mb-5">
-            <h2>Imagination is more important than knowledge</h2>
+           <!-- <h2>Imagination is more important than knowledge</h2>-->
           </div>
+          <!--
           <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center">
             <span class="video-play-icon">
               <span class="fa fa-play"></span>
             </span>
-          </a>
+          </a>-->
 
           <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
           <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
@@ -240,18 +268,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <h3 class="global-title">Drop me a Message</h3>
       <div class="row">
         <div class="col-md-8 contact-form">
-          <form  method="post" action="<?php echo base_url(); ?>submit-details">
+          <form method="post" action="<?php echo base_url(); ?>submit-details">
             <div class="mb-3">
-              <input type="text" class="form-control" name="name" placeholder="Name" required/>
+              <input type="text" class="form-control" name="name" placeholder="Name" required />
             </div>
             <div class="mb-3">
-              <input type="text" pattern="[0-9]{10}" title="Please Enter a valid mobile number" class="form-control" name="contact" placeholder="Contact" required/>
+              <input type="text" pattern="[0-9]{10}" title="Please Enter a valid mobile number" class="form-control" name="contact" placeholder="Contact" required />
             </div>
             <div class="mb-3">
               <input type="email" class="form-control" name="email" placeholder="E-mail" required />
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required/>
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required />
             </div>
             <div class="mb-3">
               <textarea class="form-control" name="message" placeholder="Your Message" style="height:150px;"></textarea>
@@ -302,7 +330,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </button>
     <script>
       // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
+      window.onscroll = function() {
         scrollFunction()
       };
 
@@ -332,7 +360,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- Template JavaScript -->
   <script src="<?php echo base_url(); ?>assets/js/jquery.magnific-popup.min.js"></script>
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       $('.popup-with-zoom-anim').magnificPopup({
         type: 'inline',
 
@@ -369,8 +397,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- disable body scroll which navbar is in active -->
   <script>
-    $(function () {
-      $('.navbar-toggler').click(function () {
+    $(function() {
+      $('.navbar-toggler').click(function() {
         $('body').toggleClass('noscroll');
       })
     });
@@ -380,7 +408,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <script src="<?php echo base_url(); ?>assets/js/smartphoto.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const sm = new SmartPhoto(".js-img-viwer", {
         showAnimation: false
       });
